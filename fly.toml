@@ -2,7 +2,7 @@
 app = "halo-labs-demo"
 
 [build]
-buildpacks = ["https://github.com/fly-apps/nixpacks-elixir"]
+  builder = "nixpacks"
 
 [env]
   PHX_HOST = "halo-labs-demo.fly.dev"
