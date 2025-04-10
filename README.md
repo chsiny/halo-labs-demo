@@ -1,18 +1,36 @@
-# HaloLabsDemo
+# 🌌 Halo Labs Demo
 
-To start your Phoenix server:
+A minimal Phoenix web app deployed to Fly.io, created for demo purposes. This project serves as a reference for deploying Elixir applications using modern CI/CD and cloud-native tools.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+---
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## 🧰 Tech Stack
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+- **Elixir** 1.18.3
+- **Phoenix Framework** 1.7.21
+- **Erlang/OTP** 26.2.5
+- **PostgreSQL** (managed by Fly.io)
+- **Fly.io** for hosting
+- **Docker** (via custom Dockerfile)
+- **GitHub Actions** for deployment automation
 
-## Learn more
+---
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Elixir & Erlang](https://elixir-lang.org/install.html)
+- [Fly CLI](https://fly.io/docs/hands-on/install-flyctl/)
+- [Docker](https://www.docker.com/)
+- Git & GitHub
+
+### Setup
+
+```bash
+git clone https://github.com/chsiny/halo-labs-demo.git
+cd halo-labs-demo
+mix deps.get
+mix ecto.setup

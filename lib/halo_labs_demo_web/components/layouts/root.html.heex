@@ -1,17 +1,30 @@
-<!DOCTYPE html>
-<html lang="en" class="[scrollbar-gutter:stable]">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title default="HaloLabsDemo" suffix=" · Phoenix Framework">
-      {assigns[:page_title]}
-    </.live_title>
-    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
-    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
-    </script>
-  </head>
-  <body class="bg-white">
+<html>
+<head>
+<meta property="og:title" content="HaloLabsDemo" />
+<meta property="og:description" content="A demo web app built with Phoenix Framework." />
+<meta property="og:image" content={~p"/assets/og-image.png"} />
+<meta property="og:url" content="https://yourdomain.com" />
+<meta name="twitter:card" content="summary_large_image" />
+<.live_title default="HaloLabsDemo" suffix=" · Phoenix Framework">
+  {assigns[:page_title] || "Welcome"}
+</.live_title>
+<link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+<script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+</script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header>
+    <!-- Add a navigation bar or branding here -->
+  </header>
+  <main class="container mx-auto p-4">
     {@inner_content}
-  </body>
+  </main>
+  <footer class="bg-gray-200 text-center py-4">
+    <p>&copy; 2025 HaloLabsDemo. All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy" class="text-blue-500 hover:underline">Privacy Policy</a> |
+      <a href="/terms-of-service" class="text-blue-500 hover:underline">Terms of Service</a>
+    </p>
+  </footer>
+</body>
 </html>
